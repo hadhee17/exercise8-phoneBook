@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: "Pinyon Script", sans-serif;
+  font-size: 3.5em;
+  font-weight: bolder;
+  font-style: normal;
+  color: #333;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ol {
+  text-align: left;
+  padding-left: 30px;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+li:hover {
+  background-color: #e9ecef;
+}
+.hidden {
+  display: none;
+}
+
+.view-all-contacts {
+  background-color: #28a745;
+  margin-left: 10px;
+}
+
+.view-all-contacts:hover {
+  background-color: #218838;
+}

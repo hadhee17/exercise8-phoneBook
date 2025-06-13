@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonebook App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pinyon+Script&family=Rubik:ital@0;1&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Phonebook</h1>
+
+      <!-- Search Contact -->
+      <form>
+        <div class="form-group">
+          <input
+            type="text"
+            class="search"
+            placeholder="Search by name or phone"
+            required
+          />
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary search-button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Search
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Contact Info
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body search-result">...</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- Add New Contact -->
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Enter name" />
+        <input type="text" id="phone" placeholder="Enter phone number" />
+        <input type="text" id="address" placeholder="Enter address" />
+        <button id="add-contact">Add Contact</button>
+      </div>
+
+      <!-- View All Contacts -->
+
+      <button
+        type="button"
+        class="btn btn-primary view-all-contacts"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        View All Contacts
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Contacts
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ol class="contact-list">
+                <!-- <li>
+                  <strong>Name:</strong> John Doe<br />
+                  <strong>Phone:</strong> 1234567890<br />
+                  <strong>Address:</strong> 123 Main St
+                </li> -->
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update/Delete -->
+      <div id="update-section" class="hidden">
+        <input type="text" id="update-name" placeholder="Update name" />
+        <input type="text" id="update-phone" placeholder="Update phone" />
+        <button id="update-contact">Update Contact</button>
+        <button id="delete-contact">Delete Contact</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
