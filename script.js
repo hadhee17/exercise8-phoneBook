@@ -58,7 +58,10 @@ btnContact.addEventListener("click", async (event) => {
 // Search Contacts
 searchButton.addEventListener("click", function () {
   const searchText = searchInput.value.trim().toLowerCase();
-
+  if (!searchText) {
+    searchResult.innerHTML = "<p>Please enter a search term.</p>";
+    return;
+  }
   const filteredContacts = APIdata.filter((contact) => {
     return (
       contact.name.toLowerCase().includes(searchText) ||
