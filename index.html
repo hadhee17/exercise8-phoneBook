@@ -85,9 +85,9 @@
 
       <!-- Add New Contact -->
       <div class="form-group">
-        <input type="text" id="name" placeholder="Enter name" />
-        <input type="text" id="phone" placeholder="Enter phone number" />
-        <input type="text" id="address" placeholder="Enter address" />
+        <input type="text" class="name" placeholder="Enter name" />
+        <input type="text" class="phone" placeholder="Enter phone number" />
+        <input type="text" class="address" placeholder="Enter address" />
         <button id="add-contact">Add Contact</button>
       </div>
 
@@ -127,11 +127,17 @@
             </div>
             <div class="modal-body">
               <ol class="contact-list">
-                <!-- <li>
-                  <strong>Name:</strong> John Doe<br />
-                  <strong>Phone:</strong> 1234567890<br />
-                  <strong>Address:</strong> 123 Main St
-                </li> -->
+                <div class="contact-item">
+                  <li>
+                    <strong>Name:</strong> John Doe<br />
+                    <strong>Phone:</strong> 1234567890<br />
+                    <strong>Address:</strong> 123 Main St
+                  </li>
+                  <div>
+                    <button class="btn" id="edit">Edit</button>
+                    <button class="btn" id="delete">Delete</button>
+                  </div>
+                </div>
               </ol>
             </div>
             <div class="modal-footer">

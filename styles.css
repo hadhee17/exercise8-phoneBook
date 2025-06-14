@@ -26,6 +26,50 @@ h1 {
   margin: 15px 0;
 }
 
+/* Style for Edit and Delete buttons */
+#edit.btn {
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  margin-right: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#edit.btn:hover {
+  background-color: #117a8b;
+}
+
+#delete.btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#delete.btn:hover {
+  background-color: #a71d2a;
+}
+
+.contact-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafbfc;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 input {
   width: 80%;
   padding: 10px;
@@ -57,8 +101,8 @@ li {
   padding: 10px;
   background-color: #f8f9fa;
   border-radius: 5px;
-  border: 1px solid #ddd;
 }
+
 li:hover {
   background-color: #e9ecef;
 }
